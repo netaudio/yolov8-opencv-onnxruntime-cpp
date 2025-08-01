@@ -65,7 +65,7 @@ template<typename _Tp>
 int yolov8_onnx(_Tp& task, cv::Mat& img, std::string& model_path)
 {
 
-	if (task.ReadModel(model_path, false)) {
+	if (task.ReadModel(model_path, true)) {
 		std::cout << "read net ok!" << std::endl;
 	}
 	else {
