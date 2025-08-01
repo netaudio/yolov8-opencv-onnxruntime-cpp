@@ -3,7 +3,7 @@ project(YOLOv8)
 
 
 SET (OpenCV_DIR path/to/opencv/build)  #opencv root
-SET (ONNXRUNTIME_DIR path/to/onnxruntime)
+SET (ONNXRUNTIME_DIR G:/opensource/onnxruntime/onnxruntime-win-x64-gpu-1.22.1)
 
 FIND_PACKAGE(OpenCV REQUIRED)
 #include_directories("")

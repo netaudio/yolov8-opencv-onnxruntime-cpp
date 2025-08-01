@@ -227,8 +227,8 @@ int main() {
 
 	//img = src.clone();
 	//yolov8(task_segment_ocv,img,model_path_seg);   //yolov8 opencv segment
-	//img = src.clone();
-	//yolov8_onnx(task_segment_ort,img,model_path_seg); //yolov8 onnxruntime segment
+	img = src.clone();
+	yolov8_onnx(task_segment_ort,img,model_path_seg); //yolov8 onnxruntime segment
 
 
 	//img = src.clone();
@@ -238,8 +238,8 @@ int main() {
 
 	//img = src.clone();
 	//yolov8(task_pose_ocv, img, model_path_pose); //yolov8 opencv pose
-	img = src.clone();
-	yolov8_onnx(task_pose_ort, img, model_path_pose); //yolov8 onnxruntime pose
+	//img = src.clone();
+	//yolov8_onnx(task_pose_ort, img, model_path_pose); //yolov8 onnxruntime pose
 
 #ifdef VIDEO_OPENCV
 	video_demo(task_detect_ocv, model_path_detect);
