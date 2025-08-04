@@ -193,12 +193,12 @@ int video_demo(_Tp& task, std::string& model_path)
 
 int main() {
 
-	std::string img_path = "./images/bus.jpg";
+	std::string img_path = "F:/chn/sealed/PLS9738Z010A000000020250208/DG2PicFlat/0507/DG2PicFlat0507464.jpg"; // "./images/bus.jpg";
 
 	std::string model_path_detect = "./models/yolov8s-pose1.onnx";
 	std::string model_path_rtdetr = "./models/rtdetr-l.onnx";  //yolov8-redetr
 	std::string model_path_obb = "./models/yolov8s-obb.onnx";
-	std::string model_path_seg = "./models/yolov8s-seg.onnx";
+	std::string model_path_seg = "F:/chn/sealed/PLS9738Z010A000000020250208/runs/segment/train7/weights/best.onnx"; // "./models/yolov8s-seg.onnx";
 	std::string model_path_pose = "./models/yolov8s-pose.onnx";
 
 	cv::Mat src = imread(img_path);
