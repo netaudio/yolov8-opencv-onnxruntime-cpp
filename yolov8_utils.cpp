@@ -219,7 +219,15 @@ void DrawPred(cv::Mat& img, std::vector<OutputParams> result, std::vector<std::s
 		putText(img, label, cv::Point(left, top), cv::FONT_HERSHEY_SIMPLEX, 1, color[result[i].id], 2);
 	}
 	cv::addWeighted(img, 0.5, mask, 0.5, 0, img); //add mask to src
-	cv::imshow("1", img);
+
+	// 计算缩小后的尺寸（宽度和高度都除以5）
+	cv::Size newSize(img.cols / 3, img.rows / 3);
+	// 创建缩小后的图像
+	cv::Mat resizedImage;
+	cv::resize(img, resizedImage, newSize, 0, 0, cv::INTER_LINEAR);
+
+
+	cv::imshow("1", resizedImage);
 	if (!isVideo)
 		cv::waitKey();
 	//destroyAllWindows();
